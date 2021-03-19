@@ -23,6 +23,7 @@ export default {
     },
     buildModules: [
       '@nuxtjs/style-resources',
+      '@nuxt/typescript-build'
     ],
     styleResources: {
       scss: ['./assets/styles/*.scss']
