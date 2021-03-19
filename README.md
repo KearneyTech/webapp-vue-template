@@ -13,3 +13,6 @@ create project folder
 create package.json from code above.
 
 npm install nuxt
+
+TypeScript Setup
+https://typescript.nuxtjs.org/guide/setup
