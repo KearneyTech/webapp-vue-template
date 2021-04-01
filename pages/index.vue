@@ -6,6 +6,6 @@
 
 <style lang="scss">
 h1 {
-    color: $normal;
+    color: $normal-foreground;
 }
 </style>
