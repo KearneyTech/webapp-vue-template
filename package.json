@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "scripts": {
+    "help": "echo npm run dev -Local Server",
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
