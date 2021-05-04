@@ -1,11 +1,21 @@
 <template>
     <div class="main">
         <h1>Home</h1>
+        <div class="nav">
+            <a href="https://www.github.com/KearneyTech" target="_blank">GitHub</a>
+        </div>
+        <div class="content">
+            <img src="images/pch.jpeg"/>
+        </div>
     </div>
 </template>
 
 <style lang="scss">
-h1 {
-    color: $normal-foreground;
+.main {
+    .content {
+        img {
+            width: 100%
+        }
+    }
 }
 </style>

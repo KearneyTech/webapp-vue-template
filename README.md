@@ -1,4 +1,7 @@
 # webapp-vue-template
+
+I'm still trying to get things setup. There are still more pieces of the infrastructere that need to be put in place.
+
 create project folder
 
 {

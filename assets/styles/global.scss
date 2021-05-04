@@ -4,17 +4,30 @@ $brightest: #fff;
 $darkest: #000;
 $bright-green: #47cf73;
 
-$background-primary: $darkest;
-$foreground-primary: $brightest;
+$primary-background: $darkest;
+$primary-foreground: $brightest;
+
 $normal-background: $darkest;
 $normal-foreground: $light-grey;
 $normal-standout: $brightest;
 $normal-subtle: $dark-grey;
 $normal-accent: $bright-green;
 
+$secondary-background: #1d1e22;
+$secondary-foreground: #e1ca72;
+$secondary-standout: #c5c8d4;
+$secondary-subtle: #4c4f5a;
+$secondary-accent: #de7300;
+
+$contrast-background: #2c303a;
+$contrast-foreground: #c7c9d3;
+$contrast-standout: $brightest;
+$contrast-subtle: $darkest;
+$contrast-accent: #76daff;
+
 body {
-    background-color: $background-primary;
-    color: $foreground-primary;
+    background-color: $primary-background;
+    color: $primary-foreground;
     font-family: 'Roboto';
 }
 
