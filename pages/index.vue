@@ -82,6 +82,16 @@
                 flex-basis: 150px;
             }
 
+            &:hover {
+                @media (min-width: 992px) {
+                    position: absolute;
+                    width: 200px;
+                    z-index: 2;
+                    height: 100vh;
+                    left: 71px;
+                }
+            }
+
             h2 {
                 display: inline-block;
                 padding-right: .8rem;
