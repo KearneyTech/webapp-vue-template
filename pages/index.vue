@@ -1,13 +1,11 @@
 <template>
     <div class="app">
-        <div class="app-header">
-            <div class="app-header-logo pane">
-                <h1>Web App</h1>
-            </div>
-            <div class="app-header-nav pane">
-                <h2>Menu</h2>
-                <a href="https://www.github.com/KearneyTech" target="_blank">GitHub</a>
-            </div>
+        <div class="app-logo pane">
+            <h1>Web App</h1>
+        </div>
+        <div class="app-nav pane">
+            <h2>Menu</h2>
+            <a href="https://www.github.com/KearneyTech" target="_blank">GitHub</a>
         </div>
         <div class="app-content pane">
             <h2>Welcome to my work</h2>
@@ -20,12 +18,19 @@
 .app {
     background-color: $primary-background;
     color: $primary-foreground;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px auto;
+    height: 100%;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% auto;
+    }
 
     @media (min-width: 992px) {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        height: 100vh;
+        grid-template-columns: 60px 60px auto;
+        grid-template-rows: 100%;
     }
 
     h1, h2 {
@@ -43,78 +48,57 @@
         padding: .5rem;
     }
 
-    &-header {
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-
-        @media (min-width: 768px) {
-            height: 280px;
-        }
+    &-logo {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        background-color: $contrast-background;
+        color: $contrast-foreground;
+        text-align: center;
+    }
+    &-nav {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        background-color: $secondary-background;
+        color: $secondary-foreground;
 
         @media (min-width: 992px) {
-            height: auto;
-            flex-basis: 300px;
+            grid-column-start: 2;
         }
 
-        &-logo {
-            background-color: $contrast-background;
-            color: $contrast-foreground;
-            flex-basis: 120px;
-            text-align: center;
-
-            @media (min-width: 768px) {
-                flex-basis: auto;
-                flex-grow: 1;
-            }
-        }
-        &-nav {
-            background-color: $secondary-background;
-            color: $secondary-foreground;
-            flex-grow: 2;
-
-            @media (min-width: 768px) {
-                flex-grow: 1;
-            }
-
+        &:hover {
             @media (min-width: 992px) {
-                height: auto;
-                flex-basis: 150px;
+                width: 200px;
+                z-index: 2;
             }
+        }
 
-            &:hover {
-                @media (min-width: 992px) {
-                    position: absolute;
-                    width: 200px;
-                    z-index: 2;
-                    height: 100vh;
-                    left: 71px;
-                }
-            }
+        h2 {
+            display: inline-block;
+            padding-right: .8rem;
+        }
 
-            h2 {
-                display: inline-block;
-                padding-right: .8rem;
-            }
-
-            a,
-            a:focus,
-            a:visited,
-            a:hover {
-                color: $secondary-accent;
-            }
+        a,
+        a:focus,
+        a:visited,
+        a:hover {
+            color: $secondary-accent;
         }
     }
+
     &-content {
         background-color: $normal-background;
         color: $normal-foreground;
 
-        img {
-            width: 100%
-        }
+        grid-column: 1 / 3;
+        grid-row: 2;
 
         @media (min-width: 992px) {
-            overflow: scroll;
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        img {
+            width: 100%
         }
     }
 }
