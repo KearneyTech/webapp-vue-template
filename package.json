@@ -8,6 +8,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
+    "axios": "^0.21.3",
     "mysql": "^2.18.1",
     "nuxt": "^2.15.3"
   },
