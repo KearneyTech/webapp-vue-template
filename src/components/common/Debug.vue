@@ -1,17 +1,33 @@
 <template>
     <section class="debug">
         {{dataLayout}}
+        <label>Portrait</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="portrait"
         />
+        <label>Landscape</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="landscape"
+        />
+        <label>Column</label>
+        <input type="radio"
+            v-model="dataLayout"
+            @change="onSelect"
+            name="layout"
+            value="column"
+        />
+        <label>Step</label>
+        <input type="radio"
+            v-model="dataLayout"
+            @change="onSelect"
+            name="layout"
+            value="step"
         />
     </section>
 </template>
