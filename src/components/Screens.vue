@@ -96,16 +96,36 @@ body {
         }
     }
     &.step {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        display: block;
+        position: relative;
         width: 700px;
-        height: 800px;
-        img:first-child {
+        height: 750px;
+
+        .screen {
+            position: absolute;
+            width: 200px;
+
+            &:nth-child(1) {
+                right: 4%;
+                top: 0%;
+            }
+            &:nth-child(2) {
+                left: 4%;
+                top: 5%;
+            }
+            &:nth-child(3) {
+                right: 4%;
+                top: 50%;
+            }
+            &:nth-child(4) {
+                left: 4%;
+                top: 55%;
+            }
+        }
+/*         img:first-child {
             margin-top: 80px;
         }
-    }
+ */    }
         }
     
 }
