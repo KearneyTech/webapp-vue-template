@@ -15,6 +15,17 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
+## TODOs
+Investigate [Vite Templates](https://github.com/vitejs/awesome-vite#templates)
+Top pick: Vue3, TypeScript, Router, Pinia, Playwright, Axios, Sass
+vue-ts-starter - Vue3 + TypeScript + Vite + Pinia.
+vite-vue3-typescript-webcomponent - Vue 3 / Typescript / boiler plate to develop Web Component.
+vulcan - The template for mobile application. Vite, Vue 3, TypeScript, Sass, i18n, Vitest&Cypress, Pinia, APIs&Mock, ESLint, Prettier, auto-importing.
+Vue Naive - Admin template, base on Vue 3 + Pinia + Naive UI.
+vite-vue3-bootstrap-ts-vitest-starter - Vue 3 + TypeScript + Vite + Bootstrap Vue 3 + Vitest.
+
+Investigate Tailwind
+
 ## Data Objects
 Item
 name, image, description, categories
