@@ -26,6 +26,8 @@ vite-vue3-bootstrap-ts-vitest-starter - Vue 3 + TypeScript + Vite + Bootstrap Vu
 
 Investigate Tailwind
 
+End to End tests
+
 ## Data Objects
 Item
 name, image, description, categories
