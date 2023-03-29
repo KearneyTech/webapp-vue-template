@@ -2,9 +2,16 @@
     <section class="spanish-lesson">
         <h3>Spanish Lesson</h3>
         <div class="word-container">
+          <button @click="handleButtonLastClick">&lt; &lt; &lt;</button>
+          <div class="word" @click="handleWordClick">
+            {{ displayWord }}
+          </div>
+          <button @click="handleButtonNextClick">&gt; &gt; &gt;</button>   
+<!--
   <div class="word" v-for="(word, index) in words" v-bind:key="index">
   {{ word.es }} - {{ word.en }}
   </div>
+-->
 </div>
     </section>
     <!--
@@ -23,20 +30,73 @@
 
 </template>
 
+<style lang="scss">
+.word-container {
+  display: flex;
+  align-items: center;
+
+  .word {
+    border: 1px solid white;
+    //width: 160px;
+    //height: 90px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  line-height: 4.1em;
+  //padding: .3em;
+  width: 30vw;
+  }
+}
+</style>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     data(){
     return {
+      displayWord: "a veces",
+      wordsDisplayIndex: 0,
       words: <any>[]
     }
   },
   setup() {
     console.log("setup");
   },
+  methods: {
+    handleWordClick(event) {
+      if(this.displayWord === this.words[this.wordsDisplayIndex].en) {
+        this.displayWord = this.words[this.wordsDisplayIndex].es;
+      } else {
+        this.displayWord = this.words[this.wordsDisplayIndex].en;
+      }
+
+      //this.wordsDisplayIndex++;
+    },
+    handleButtonLastClick() {
+      this.updateWord(-1);
+    },
+    handleButtonNextClick() {
+      this.updateWord(1);
+    },
+    updateWord(change) {
+      const newIndex = this.wordsDisplayIndex + change;
+      
+      if(newIndex < 0) {
+        this.wordsDisplayIndex = this.words.length - 1;
+      } else if(newIndex > this.words.length) {
+        this.wordsDisplayIndex = 0;
+      } else {
+        this.wordsDisplayIndex = newIndex;
+      }
+
+      this.displayWord = this.words[this.wordsDisplayIndex].es;
+    }
+  },
   mounted() {
     this.words = staticData.collection;
+    this.displayWord = this.words[this.wordsDisplayIndex].es;
     console.log(this.words)
   }
 });
@@ -73,11 +133,15 @@ const staticData = {
     },
     {
       es: "contento",
-      en: "glad"
+      en: "happy"
     },
     {
       es: "feliz",
       en: "happy"
+    },
+    {
+      es: "a veces",
+      en: "sometimes"
     },
     {
       es: "otra vez",
