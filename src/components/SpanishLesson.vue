@@ -7,27 +7,8 @@
             {{ displayWord }}
           </div>
           <button @click="handleButtonNextClick">&gt; &gt; &gt;</button>   
-<!--
-  <div class="word" v-for="(word, index) in words" v-bind:key="index">
-  {{ word.es }} - {{ word.en }}
-  </div>
--->
-</div>
+        </div>
     </section>
-    <!--
-
-  diez        = ten
-  veinte      = twenty
-  treinta     = thirty
-  cuarenta    = forty
-  cincuenta   = fifty
-  sesenta     = sixty
-  setenta     = seventy
-  ochenta     = eighty
-  noventa     = ninety
-  cien        = hundred
--->
-
 </template>
 
 <style lang="scss">
@@ -37,15 +18,12 @@
 
   .word {
     border: 1px solid white;
-    //width: 160px;
-    //height: 90px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-size: 4em;
-  line-height: 4.1em;
-  //padding: .3em;
-  width: 30vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    line-height: 4.1em;
+    width: 30vw;
   }
 }
 </style>
@@ -56,7 +34,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data(){
     return {
-      displayWord: "a veces",
+      displayWord: "",
       wordsDisplayIndex: 0,
       words: <any>[]
     }
@@ -71,8 +49,6 @@ export default defineComponent({
       } else {
         this.displayWord = this.words[this.wordsDisplayIndex].en;
       }
-
-      //this.wordsDisplayIndex++;
     },
     handleButtonLastClick() {
       this.updateWord(-1);
@@ -163,6 +139,46 @@ const staticData = {
     {
       es: "disfrutar",
       en: "enjoy"
+    },
+    {
+      es: "diez",
+      en: "ten"
+    },
+    {
+      es: "veinte",
+      en: "twenty"
+    },
+    {
+      es: "treinta",
+      en: "thirty"
+    },
+    {
+      es: "cuarenta",
+      en: "forty"
+    },
+    {
+      es: "cincuenta",
+      en: "fifty"
+    },
+    {
+      es: "sesenta",
+      en: "sixty"
+    },
+    {
+      es: "setenta",
+      en: "seventy"
+    },
+    {
+      es: "ochenta",
+      en: "eighty"
+    },
+    {
+      es: "noventa",
+      en: "ninety"
+    },
+    {
+      es: "cien",
+      en: "hundred"
     }
 ]};
 </script>
