@@ -82,10 +82,11 @@ export default defineComponent({
     },
     updateWord(change) {
       const newIndex = this.wordsDisplayIndex + change;
-      
+      const wordCount = this.words.length;
+
       if(newIndex < 0) {
-        this.wordsDisplayIndex = this.words.length - 1;
-      } else if(newIndex > this.words.length) {
+        this.wordsDisplayIndex = wordCount - 1;
+      } else if(newIndex >= wordCount) {
         this.wordsDisplayIndex = 0;
       } else {
         this.wordsDisplayIndex = newIndex;
@@ -97,7 +98,7 @@ export default defineComponent({
   mounted() {
     this.words = staticData.collection;
     this.displayWord = this.words[this.wordsDisplayIndex].es;
-    console.log(this.words)
+    console.log('mounted');
   }
 });
 
