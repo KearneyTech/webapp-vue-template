@@ -8,6 +8,7 @@
           </div>
           <button @click="handleButtonNextClick">&gt; &gt; &gt;</button>   
         </div>
+        <Debugger :output="log"/>
     </section>
 </template>
 
@@ -30,20 +31,24 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Debugger from './common/Debugger.vue';
 
 export default defineComponent({
+    components: {Debugger},
     data(){
     return {
       displayWord: "",
       wordsDisplayIndex: 0,
-      words: <any>[]
+      words: <any>[],
+      log: ""
     }
   },
   setup() {
     console.log("setup");
   },
   methods: {
-    handleWordClick(event) {
+    handleWordClick() {
+      this.logger('clicked');
       if(this.displayWord === this.words[this.wordsDisplayIndex].en) {
         this.displayWord = this.words[this.wordsDisplayIndex].es;
       } else {
@@ -56,7 +61,7 @@ export default defineComponent({
     handleButtonNextClick() {
       this.updateWord(1);
     },
-    updateWord(change) {
+    updateWord(change: number) {
       const newIndex = this.wordsDisplayIndex + change;
       const wordCount = this.words.length;
 
@@ -69,17 +74,35 @@ export default defineComponent({
       }
 
       this.displayWord = this.words[this.wordsDisplayIndex].es;
+    },
+    autoAdvance(){
+      //setInterval(() =>{this.updateWord(1)}, 1000)
+    },
+    logger(input: string) {
+      this.log = `${this.log} ${input}`;
+      //let value = this.log;
+      //value += input;
+      //this.log = `{this.log} {input}`;
     }
   },
   mounted() {
     this.words = staticData.collection;
     this.displayWord = this.words[this.wordsDisplayIndex].es;
+    //this.autoAdvance();
     console.log('mounted');
   }
 });
 
 const staticData = {
   collection: [
+    {
+      es: "llorar",
+      en: "to cry"
+    },
+    {
+      es: "sonreír",
+      en: "to smile"
+    },
     {
       es: "enojado",
       en: "angry"
@@ -138,7 +161,7 @@ const staticData = {
     },
     {
       es: "disfrutar",
-      en: "enjoy"
+      en: "to enjoy"
     },
     {
       es: "diez",
