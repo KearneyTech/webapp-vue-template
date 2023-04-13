@@ -8,7 +8,7 @@
           </div>
           <button @click="handleButtonNextClick">&gt; &gt; &gt;</button>   
         </div>
-        <Debugger :output="log"/>
+        <Debugger/>
     </section>
 </template>
 
@@ -31,16 +31,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useDebugStore } from '../stores/general';
 import Debugger from './common/Debugger.vue';
 
 export default defineComponent({
-    components: {Debugger},
-    data(){
+  components: {Debugger},
+  data(){
     return {
       displayWord: "",
       wordsDisplayIndex: 0,
       words: <any>[],
-      log: ""
+      store: useDebugStore()
     }
   },
   setup() {
@@ -79,10 +80,7 @@ export default defineComponent({
       //setInterval(() =>{this.updateWord(1)}, 1000)
     },
     logger(input: string) {
-      this.log = `${this.log} ${input}`;
-      //let value = this.log;
-      //value += input;
-      //this.log = `{this.log} {input}`;
+      this.store.log(input);
     }
   },
   mounted() {

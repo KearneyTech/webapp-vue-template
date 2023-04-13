@@ -1,19 +1,26 @@
 <template>
     <section class="debugger">
-        <div class="console">{{ output }}</div>
+        <div class="console">{{ computedOutput }}</div>
     </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useDebugStore } from '../../stores/general';
 
 export default defineComponent({
-    props: {
-        output: { type: String},
+    data() {
+        return {
+            store: useDebugStore()
+        }
     },
     setup() {
-        
     },
+    computed: {
+        computedOutput() {
+            return this.store.output
+        }
+    }
 })
 </script>
 
