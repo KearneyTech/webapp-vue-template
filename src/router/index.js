@@ -3,6 +3,7 @@ import HelloWorld from './../components/HelloWorld.vue';
 import Screens from './../components/Screens.vue';
 import SpanishLesson from './../components/SpanishLesson.vue';
 import Golf from './../components/Golf.vue';
+import MediaPlayer from './../components/MediaPlayer.vue';
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: "/golf",
         name: "Golf",
         component: Golf,
+    },
+    {
+        path: "/media-player",
+        name: "Media Player",
+        component: MediaPlayer,
     }
 ]
 
