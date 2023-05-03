@@ -62,7 +62,7 @@ export default defineComponent({
     handleButtonNextClick() {
       this.updateWord(1);
     },
-    updateWord(change: number) {
+    advanceWord(change: number) {
       const newIndex = this.wordsDisplayIndex + change;
       const wordCount = this.words.length;
 
@@ -74,10 +74,19 @@ export default defineComponent({
         this.wordsDisplayIndex = newIndex;
       }
 
-      this.displayWord = this.words[this.wordsDisplayIndex].es;
+      this.updateWord(this.wordsDisplayIndex);
+    },
+    updateWord(index: number){
+      this.wordsDisplayIndex = index;
+      this.displayWord = this.words[index].es;
+    },
+    randomWord(){
+      const max = this.words.length;
+      this.updateWord((Math.floor(Math.random() * max) + 1) - 1);
     },
     autoAdvance(){
-      //setInterval(() =>{this.updateWord(1)}, 1000)
+      //setInterval(() =>{this.advanceWord(1)}, 1000)
+      setInterval(() =>{this.randomWord()}, 3000)
     },
     logger(input: string) {
       this.store.log(input);
@@ -86,7 +95,7 @@ export default defineComponent({
   mounted() {
     this.words = staticData.collection;
     this.displayWord = this.words[this.wordsDisplayIndex].es;
-    //this.autoAdvance();
+    this.autoAdvance();
     console.log('mounted');
   }
 });
@@ -114,6 +123,18 @@ const staticData = {
       en: "excited"
     },
     {
+      es: "sorprendida",
+      en: "surprised"
+    },
+    {
+      es: "contento",
+      en: "happy"
+    },
+    {
+      es: "feliz",
+      en: "happy"
+    },
+    {
       es: "aburrido",
       en: "bored"
     },
@@ -130,14 +151,6 @@ const staticData = {
       en: "sick"
     },
     {
-      es: "contento",
-      en: "happy"
-    },
-    {
-      es: "feliz",
-      en: "happy"
-    },
-    {
       es: "a veces",
       en: "sometimes"
     },
@@ -146,16 +159,104 @@ const staticData = {
       en: "again"
     },
     {
+      es: "algo",
+      en: "something"
+    },
+    {
+      es: "algo mas",
+      en: "anything else"
+    },
+    {
       es: "algunos",
       en: "some"
     },
     {
-      es: "por supuesto",
-      en: "of course"
+      es: "unos",
+      en: "some"
     },
     {
-      es: "sorprendida",
-      en: "surprised"
+      es: "alguien",
+      en: "someone"
+    },
+    {
+      es: "nadie",
+      en: "nobody"
+    },
+    {
+      es: "todos",
+      en: "everyone"
+    },
+    {
+      es: "nunca",
+      en: "never"
+    },
+    {
+      es: "siempre",
+      en: "always"
+    },
+    {
+      es: "casi",
+      en: "almost"
+    },
+    {
+      es: "rio",
+      en: "river"
+    },
+    {
+      es: "playa",
+      en: "beach"
+    },
+    {
+      es: "lago",
+      en: "lake"
+    },
+    {
+      es: "piscina",
+      en: "pool"
+    },
+    {
+      es: "mar",
+      en: "sea"
+    },
+    {
+      es: "océano",
+      en: "ocean"
+    },
+    {
+      es: "ensenada",
+      en: "cove"
+    },
+    {
+      es: "arroyo",
+      en: "creek"
+    },
+    {
+      es: "primero",
+      en: "first"
+    },
+    {
+      es: "próximo",
+      en: "next"
+    },
+    {
+      es: "último",
+      en: "last"
+    },
+    {
+      es: "antigua",
+      en: "ancient"
+    },
+    {
+      es: "vieja",
+      en: "old"
+    },
+    {
+      es: "nueva",
+      en: "new"
+    },
+    {
+      es: "por supuesto",
+      en: "of course"
     },
     {
       es: "disfrutar",
