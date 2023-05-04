@@ -1,0 +1,80 @@
+$primary: purple;
+
+$light-grey: #c5c8d4;
+$dark-grey: #4c4f5a;
+$brightest: #fff;
+$darkest: #000;
+$bright-green: #47cf73;
+
+$background-primary: $darkest;
+$foreground-primary: $brightest;
+$normal-background: $darkest;
+$normal-foreground: $light-grey;
+$normal-standout: $brightest;
+$normal-subtle: $dark-grey;
+$normal-accent: $bright-green;
+
+body {
+    background-color: $background-primary;
+    color: $foreground-primary;
+    font-family: 'Roboto';
+}
+
+.panel-background {
+    width: 80%;
+    background-color: #000;
+  
+    .panel {
+      font-size: 1rem;
+      padding: 10px;
+      width: 45%;
+      height: 40vh;
+      display: inline-block;
+      margin: 0 auto;
+  
+      .panel-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+  
+      &.normal {
+        background-color: #000;
+        color: #c5c8d4;
+        .panel-icon {
+          color: #4c4f5a;
+        }
+        .panel-title {
+          color: #fff;
+        }
+        .accent {
+          color: #47cf73;
+        }
+      }
+      &.secondary {
+        background-color: #1d1e22;
+        color: #e1ca72;
+        .panel-icon {
+          color: #4c4f5a;
+        }
+        .panel-title {
+          color: #c5c8d4;
+        }
+        .accent {
+          color: #de7300;
+        }
+      }
+      &.contrast {
+        background-color: #2c303a;
+        color: #c7c9d3;
+        .panel-icon {
+          color: #000;
+        }
+        .panel-title {
+          color: #fff;
+        }
+        .accent {
+          color: #76daff;
+        }
+      }
+    }
+  }
