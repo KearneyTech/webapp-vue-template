@@ -1,5 +1,5 @@
 <template>
-    <section class="debug">
+    <section class="menu">
         {{dataLayout}}
         <label>Portrait</label>
         <input type="radio"
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: "Debug",
+    name: "Menu",
     data() {
         return {
             dataLayout: "portrait"
