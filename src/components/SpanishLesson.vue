@@ -155,6 +155,10 @@ const staticData = {
       en: "sometimes"
     },
     {
+      es: "a menudo",
+      en: "often"
+    },
+    {
       es: "otra vez",
       en: "again"
     },
