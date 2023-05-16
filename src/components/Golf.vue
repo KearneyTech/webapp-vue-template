@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Debug from './common/Debug.vue';
+import Debug from './common/Debugger.vue';
 
 export default {
     components: {
