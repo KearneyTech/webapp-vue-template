@@ -85,8 +85,8 @@ export default defineComponent({
       this.updateWord((Math.floor(Math.random() * max) + 1) - 1);
     },
     autoAdvance(){
-      //setInterval(() =>{this.advanceWord(1)}, 1000)
-      setInterval(() =>{this.randomWord()}, 3000)
+      setInterval(() =>{this.advanceWord(1)}, 3000)
+      //setInterval(() =>{this.randomWord()}, 3000)
     },
     logger(input: string) {
       this.store.log(input);
@@ -102,6 +102,18 @@ export default defineComponent({
 
 const staticData = {
   collection: [
+    {
+      es: "tenedora",
+      en: "fork"
+    },
+    {
+      es: "cuchara",
+      en: "spoon"
+    },
+    {
+      es: "cuchillo",
+      en: "knife"
+    },
     {
       es: "llorar",
       en: "to cry"
