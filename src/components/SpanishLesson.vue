@@ -48,6 +48,14 @@ export default defineComponent({
     console.log("setup");
   },
   methods: {
+    /**
+     * 
+     * no last/previous/back
+     * onNext => last = current
+     * 
+     * nice to have: history for random advance
+     * 
+     */
     handleWordClick() {
       this.logger('clicked');
       if(this.displayWord === this.words[this.wordsDisplayIndex].en) {
@@ -57,14 +65,17 @@ export default defineComponent({
       }
     },
     handleButtonLastClick() {
-      this.updateWord(-1);
+      this.advanceWord(-1);
     },
     handleButtonNextClick() {
-      this.updateWord(1);
+      this.advanceWord(1);
     },
     advanceWord(change: number) {
       const newIndex = this.wordsDisplayIndex + change;
       const wordCount = this.words.length;
+
+      console.log(`advanceWord wordsDisplayIndex: ${this.wordsDisplayIndex}`);
+      console.log(`advanceWord newIndex: ${newIndex}`);
 
       if(newIndex < 0) {
         this.wordsDisplayIndex = wordCount - 1;
@@ -77,6 +88,7 @@ export default defineComponent({
       this.updateWord(this.wordsDisplayIndex);
     },
     updateWord(index: number){
+      console.log(`update index: ${index}`);
       this.wordsDisplayIndex = index;
       this.displayWord = this.words[index].es;
     },
@@ -94,8 +106,9 @@ export default defineComponent({
   },
   mounted() {
     this.words = staticData.collection;
-    this.displayWord = this.words[this.wordsDisplayIndex].es;
-    this.autoAdvance();
+    this.advanceWord(0);
+    //this.displayWord = this.words[this.wordsDisplayIndex].es;
+    //this.autoAdvance();
     console.log('mounted');
   }
 });
