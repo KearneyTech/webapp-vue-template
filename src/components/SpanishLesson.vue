@@ -2,11 +2,13 @@
     <section class="spanish-lesson">
         <h3>Spanish Lesson</h3>
         <div class="word-container">
-          <button @click="handleButtonLastClick">&lt; &lt; &lt;</button>
-          <div class="word" @click="handleWordClick">
-            {{ displayWord }}
+          <button @click="handleButtonLastClick">&lt;</button>
+          <div class="word-card">
+            <div class="word" @click="handleWordClick">
+              {{ displayWord }}
+            </div>
           </div>
-          <button @click="handleButtonNextClick">&gt; &gt; &gt;</button>   
+          <button @click="handleButtonNextClick">&gt;</button>   
         </div>
         <Debugger/>
     </section>
@@ -15,16 +17,20 @@
 <style lang="scss">
 .word-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  height: 200px;
 
-  .word {
+  .word-card{
+    width: 300px;
     border: 1px solid white;
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 4em;
-    line-height: 4.1em;
-    width: 30vw;
+
+    .word {
+      font-size: 4em;
+      line-height: 1.5em;
+    }
   }
 }
 </style>
