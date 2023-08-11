@@ -1,3 +1,7 @@
+@mixin media-query($min-width) {
+  @media only screen and (min-width: $min-width) { @content; }
+}
+
 $primary: purple;
 
 $light-grey: #c5c8d4;
