@@ -21,14 +21,19 @@
   height: 200px;
 
   .word-card{
-    width: 300px;
+    width: 260px;
     border: 1px solid white;
     align-items: center;
     display: flex;
     justify-content: center;
+    font-size: 2.7em;
+
+    @include min-width(500px) {
+        font-size: 3.6em;
+        width: 330px;
+    }
 
     .word {
-      font-size: 4em;
       line-height: 1.5em;
     }
   }
