@@ -15,6 +15,9 @@ export default defineComponent({
   methods: {
     handleMenuClick(){
       this.menuState = this.menuState == "" ? "hidden" : "";
+    },
+    navReset(){
+      this.menuState = "hidden";
     }
   }
 });
@@ -26,11 +29,11 @@ export default defineComponent({
     <div
       :class="['nav-links', menuState]"
     >
-      <router-link to="/">Home</router-link>
-      <router-link to="/golf">Golf</router-link>
-      <router-link to="/spanish-lesson">Spanish Lesson</router-link>
-      <router-link to="/screens">Screens</router-link>
-      <router-link to="/media-player">Media PLayer</router-link>
+      <router-link to="/" @click="navReset">Home</router-link>
+      <router-link to="/golf" @click="navReset">Golf</router-link>
+      <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
+      <router-link to="/screens" @click="navReset">Screens</router-link>
+      <router-link to="/media-player" @click="navReset">Media PLayer</router-link>
     </div>
     <router-view />
   </section>
