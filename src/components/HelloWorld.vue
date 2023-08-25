@@ -21,15 +21,7 @@
     <div class="panel highlight">Reverse</div>
     <div class="header">Text</div>
     <div class="text">
-        Check out
-        <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-          >create-vue</a
-        >, the official Vue + Vite starter
-      
-        Install
-        <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-        in your IDE for a better DX
-      Click on the Vite and Vue logos to learn more
+      This is a collection of small components I put together.
   </div>
 </section>
 </template>
