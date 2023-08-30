@@ -1,34 +1,36 @@
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from 'vue';
+import router from '../router';
 
+export default defineComponent({
+  data() {return {}},
+  methods: {
+    handleBlockClick(path: string){
+      router.push(path);
+    }
+  }
+});
 </script>
 
 <template>
   <section class="template-glass">
-    <div class="logo">logo</div>
-    <div class="title">Glass Template</div>
-    <div class="header">Blocks</div>
-    <div class="block-container">
-      <div class="block">
-        BL
-      </div>
-      <div class="block">OC</div>
-      <div class="block">KS</div>
-    </div>
-    <div class="header">Panels</div>
-    <div class="panel">
-          Edit to test HMR
-    </div>
-    <div class="panel highlight">Reverse</div>
-    <div class="header">Text</div>
+    <div class="title">Gallery of Prototypes</div>
     <div class="text">
-      This is a collection of small components I put together.
-  </div>
+      This is a collection of small components I put together. Click on a component to take a look. Use the menu icon to move around the gallery. Hope you enjoy it.
+    </div>
+    <div class="header">Components</div>
+    <div class="block-container">
+      <div class="block link" @click="handleBlockClick('spanish-lesson')">Flash Cards</div>
+      <div class="block link" @click="handleBlockClick('golf')">Golf</div>
+      <div class="block link" @click="handleBlockClick('screens')">Screens</div>
+      <div class="block link" @click="handleBlockClick('media-player')">Media Player</div>
+    </div>
 </section>
 </template>
 
 <style lang="scss" scoped>
 $thickness: 3px;
-$bottom-spacing: 4em;
+$bottom-spacing: 1.2em;
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -44,13 +46,8 @@ body {
   margin: 0 auto;
   margin-bottom: .5rem;
 }
-.link {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
 .title {
-  display: inline;
+  display: inline-block;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: $bottom-spacing;
@@ -66,7 +63,8 @@ body {
   width: 100%;
   align-items: stretch;
   flex-direction: row;
-  height: 8rem;
+  flex-wrap: wrap;
+  margin-bottom: .5rem;
 }
 .block {
   display: inline-flex;
@@ -74,8 +72,19 @@ body {
   background-color: #333;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
   margin: .4rem;
+  width: 5rem;
+  padding: .4rem;
+
+  &.link {
+    color: $normal-accent;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $normal-accent;
+    }
+  }
 }
 .panel{
   display: inline-block;
