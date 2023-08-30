@@ -10,7 +10,7 @@
           </div>
           <button @click="handleButtonNextClick">&gt;</button>   
         </div>
-        <Debugger/>
+        <!-- Debugger/ -->
     </section>
 </template>
 
