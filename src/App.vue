@@ -34,7 +34,7 @@ export default defineComponent({
 
 <template>
   <section class="app-vue">
-    <a @click="handleMenuClick"><i class="fa-solid fa-bars"></i></a>
+    <a class="menu-link" @click="handleMenuClick"><i class="fa-solid fa-bars"></i></a>
     <div
       :class="['nav-links', menuState]"
     >
@@ -58,8 +58,15 @@ export default defineComponent({
     padding: 2rem;
   }
 }
+
+.menu-link {
+  position: absolute;
+  top: 0;
+}
+
 .app-vue {
   position: relative;
+  padding-top: 10px;
 }
 .nav-links {
   display: flex;
@@ -69,6 +76,8 @@ export default defineComponent({
   top: 0;
   left: 0;
   width: 140px;
+  z-index: 10;
+  background-color: $background-primary;
 
   &.hidden {
     display: none;
