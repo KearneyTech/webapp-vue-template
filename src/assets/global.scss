@@ -24,6 +24,10 @@ body {
     font-family: 'Roboto';
 }
 
+a {
+  color: $normal-accent;
+}
+
 .panel-background {
     width: 80%;
     background-color: #000;
