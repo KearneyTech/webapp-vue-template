@@ -25,6 +25,8 @@ export default defineComponent({
       <div class="block link" @click="handleBlockClick('screens')">Screens</div>
       <div class="block link" @click="handleBlockClick('media-player')">Media Player</div>
     </div>
+    <div class="panel highlight">For the code of this application, visit <a target="_blank" href="https://github.com/KearneyTech/webapp-vue-template">GitHub.com</a></div>
+    <div class="panel highlight">For more about me, visit <a href="https://www.kearneytech.com">KearneyTech.com</a></div>
 </section>
 </template>
 
@@ -91,7 +93,9 @@ body {
   border: $thickness solid #fff;
   width: 100%;
   margin: 1rem auto;
-  line-height: 3rem;
+  line-height: 1.3rem;
+  padding: .4rem;
+
 }
 .text{
   display: inline-block;

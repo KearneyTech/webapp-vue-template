@@ -17,7 +17,8 @@ export default {
 <style lang="scss">
 .screen {
     h5 {
-        color: $bright-green
+        color: $bright-green;
+        margin-bottom: 0;
     }
 
     img {
