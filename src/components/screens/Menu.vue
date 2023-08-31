@@ -1,6 +1,5 @@
 <template>
     <section class="menu">
-        {{dataLayout}}
         <label>Portrait</label>
         <input type="radio"
             v-model="dataLayout"
@@ -49,3 +48,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.menu input {
+    margin-right: 15px;
+}
+</style>

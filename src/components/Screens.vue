@@ -70,12 +70,21 @@ body {
     h3 {color: $normal-standout}
 
     .screen-container {
+        margin-bottom: 10px;
+        
         &.portrait {
             display: flex;
-            flex-direction: column;
             flex-wrap: wrap;
-            width: 710px;
-            height: 550px;
+            justify-content: center;
+            width: 500px;
+
+            .screen {
+                width: 200px;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
         &.column {
             display: flex;
@@ -86,8 +95,8 @@ body {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            width: 900px;
-            height: 600px;
+            width: 780px;
+            height: 500px;
             img {
                 width: 250px;
                 height: 188px;
@@ -96,8 +105,8 @@ body {
         &.step {
             display: block;
             position: relative;
-            width: 700px;
-            height: 750px;
+            width: 540px;
+            height: 600px;
 
             .screen {
                 position: absolute;
@@ -109,15 +118,15 @@ body {
                 }
                 &:nth-child(2) {
                     left: 4%;
-                    top: 5%;
+                    top: 10%;
                 }
                 &:nth-child(3) {
                     right: 4%;
-                    top: 50%;
+                    top: 40%;
                 }
                 &:nth-child(4) {
                     left: 4%;
-                    top: 55%;
+                    bottom: 10%;
                 }
             }
         }
