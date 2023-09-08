@@ -14,9 +14,9 @@ export default defineComponent({
 
 <template>
   <section class="template-glass">
-    <div class="title">Gallery of Prototypes</div>
+    <div class="title">Gallery of Components</div>
     <div class="text">
-      This is a collection of small components I put together. Click on a component to take a look. Use the menu icon to move around the gallery. Hope you enjoy it.
+      This is a collection of small components I put together. I use this code base for rapid prototyping with VueJS. Click on a component to take a look. Use the menu icon to move around the gallery. Hope you enjoy it.
     </div>
     <div class="header">Components</div>
     <div class="block-container">
