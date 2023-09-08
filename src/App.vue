@@ -17,6 +17,9 @@ export default defineComponent({
     handleMenuClick(){
       this.menuState = this.menuState == "" ? "hidden" : "";
     },
+    handleMenuCloseClick(){
+      this.navReset;
+    },
     navReset(){
       this.menuState = "hidden";
     }
@@ -38,11 +41,14 @@ export default defineComponent({
     <div
       :class="['nav-links', menuState]"
     >
-      <router-link to="/" @click="navReset">Home</router-link>
-      <router-link to="/golf" @click="navReset">Golf</router-link>
-      <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
-      <router-link to="/screens" @click="navReset">Screens</router-link>
-      <router-link to="/media-player" @click="navReset">Media PLayer</router-link>
+      <div class="nav-container">
+        <a class="menu-close" @click="handleMenuCloseClick"><i class="fa-solid fa-xmark"></i></a>
+        <router-link to="/" @click="navReset">Home</router-link>
+        <router-link to="/golf" @click="navReset">Golf</router-link>
+        <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
+        <router-link to="/screens" @click="navReset">Screens</router-link>
+        <router-link to="/media-player" @click="navReset">Media PLayer</router-link>
+      </div>
     </div>
     <router-view />
   </section>
@@ -62,6 +68,7 @@ export default defineComponent({
 .menu-link {
   position: absolute;
   top: 0;
+  cursor: pointer;
 }
 
 .app-vue {
@@ -69,8 +76,6 @@ export default defineComponent({
   padding-top: 10px;
 }
 .nav-links {
-  display: flex;
-  flex-direction: column;
   border: 1px solid white;
   position: absolute;
   top: 0;
@@ -81,6 +86,19 @@ export default defineComponent({
 
   &.hidden {
     display: none;
+  }
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .menu-close {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      cursor: pointer;
+    }
   }
 }
 </style>
