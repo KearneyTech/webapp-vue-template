@@ -18,7 +18,7 @@ export default defineComponent({
       this.menuState = this.menuState == "" ? "hidden" : "";
     },
     handleMenuCloseClick(){
-      this.navReset;
+      this.navReset();
     },
     navReset(){
       this.menuState = "hidden";
@@ -37,12 +37,12 @@ export default defineComponent({
 
 <template>
   <section class="app-vue">
-    <a class="menu-link" @click="handleMenuClick"><i class="fa-solid fa-bars"></i></a>
+    <button class="menu-link" @click="handleMenuClick"><i class="fa-solid fa-bars"></i></button>
     <div
       :class="['nav-links', menuState]"
     >
       <div class="nav-container">
-        <a class="menu-close" @click="handleMenuCloseClick"><i class="fa-solid fa-xmark"></i></a>
+        <button class="menu-close" @click="handleMenuCloseClick"><i class="fa-solid fa-xmark"></i></button>
         <router-link to="/" @click="navReset">Home</router-link>
         <router-link to="/golf" @click="navReset">Golf</router-link>
         <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
@@ -63,12 +63,14 @@ export default defineComponent({
   @include min-width(470px) {
     padding: 2rem;
   }
-}
 
-.menu-link {
-  position: absolute;
-  top: 0;
-  cursor: pointer;
+  button:hover {
+    border-color: $normal-accent;
+  }
+
+  button:focus {
+    outline-color: $normal-accent;
+  }
 }
 
 .app-vue {
@@ -76,7 +78,7 @@ export default defineComponent({
   padding-top: 10px;
 }
 .nav-links {
-  border: 1px solid white;
+  border: 1px solid $normal-subtle;
   position: absolute;
   top: 0;
   left: 0;
@@ -92,12 +94,13 @@ export default defineComponent({
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: .4rem;
 
     .menu-close {
       position: absolute;
-      top: 0;
-      right: 5px;
-      cursor: pointer;
+      top: .2rem;
+      right: .2rem;
+      padding: .4rem .6rem;
     }
   }
 }
