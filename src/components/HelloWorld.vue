@@ -70,8 +70,8 @@ body {
 }
 .block {
   display: inline-flex;
-  border: $thickness solid #333232;
-  background-color: #333;
+  border: $thickness solid $normal-subtle;
+  background-color: $normal-subtle;
   align-items: center;
   justify-content: center;
   margin: .4rem;
