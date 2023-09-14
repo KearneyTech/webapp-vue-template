@@ -7,7 +7,8 @@ import router from './router';
 export default defineComponent({
   data() {
         return {
-          menuState: "hidden"
+          menuState: "hidden",
+          menuButtonContent: "fa-bars"
         }
       },
   setup() {
@@ -16,12 +17,11 @@ export default defineComponent({
   methods: {
     handleMenuClick(){
       this.menuState = this.menuState == "" ? "hidden" : "";
-    },
-    handleMenuCloseClick(){
-      this.navReset();
+      this.menuButtonContent = this.menuButtonContent == "fa-xmark" ? "fa-bars" : "fa-xmark";
     },
     navReset(){
       this.menuState = "hidden";
+      this.menuButtonContent = "fa-bars";
     }
   },
   mounted() {
@@ -37,12 +37,11 @@ export default defineComponent({
 
 <template>
   <section class="app-vue">
-    <button class="menu-link" @click="handleMenuClick"><i class="fa-solid fa-bars"></i></button>
     <div
       :class="['nav-links', menuState]"
     >
+    <button class="menu-link" @click="handleMenuClick"><i :class="['fa-solid', menuButtonContent]"></i></button>
       <div class="nav-container">
-        <button class="menu-close" @click="handleMenuCloseClick"><i class="fa-solid fa-xmark"></i></button>
         <router-link to="/" @click="navReset">Home</router-link>
         <router-link to="/golf" @click="navReset">Golf</router-link>
         <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
@@ -86,10 +85,6 @@ export default defineComponent({
   z-index: 10;
   background-color: $background-primary;
 
-  &.hidden {
-    display: none;
-  }
-
   .nav-container {
     position: relative;
     display: flex;
@@ -101,6 +96,14 @@ export default defineComponent({
       top: .2rem;
       right: .2rem;
       padding: .4rem .6rem;
+    }
+  }
+
+  &.hidden {
+    border-style: hidden;
+
+    .nav-container {
+      display: none;
     }
   }
 }
