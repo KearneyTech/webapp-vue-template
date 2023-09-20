@@ -1,6 +1,6 @@
 <template>
     <section class="spanish-lesson">
-        <h3>Spanish Lesson</h3>
+        <h3>Spanish Flash Cards</h3>
         <div class="word-container">
           <button @click="handleButtonLastClick">&lt;</button>
           <div class="word-card">
@@ -10,13 +10,14 @@
           </div>
           <button @click="handleButtonNextClick">&gt;</button>   
         </div>
+        <div class="description">Click on a word to see it's translation. Use the buttons to change the cards.</div>
         <!-- Debugger/ -->
     </section>
 </template>
 
 <style lang="scss">
 .word-container {
-  display: flex;
+  display: inline-flex;
   align-items: stretch;
   height: 200px;
 
@@ -36,6 +37,18 @@
     .word {
       line-height: 1.5em;
     }
+  }
+}
+
+.spanish-lesson {
+  h3 {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 2em;
+    line-height: 1.2em;
+    padding: 1.4em;
   }
 }
 </style>
@@ -285,6 +298,10 @@ const staticData = {
     {
       es: "antigua",
       en: "ancient"
+    },
+    {
+      es: "joven",
+      en: "young"
     },
     {
       es: "vieja",
