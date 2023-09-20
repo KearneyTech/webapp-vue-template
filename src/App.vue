@@ -37,10 +37,8 @@ export default defineComponent({
 
 <template>
   <section class="app-vue">
-    <div
-      :class="['nav-links', menuState]"
-    >
-    <button class="menu-link" @click="handleMenuClick"><i :class="['fa-solid', menuButtonContent]"></i></button>
+    <div :class="['nav-links', menuState]">
+      <button class="menu-link" @click="handleMenuClick"><i :class="['fa-solid', menuButtonContent]"></i></button>
       <div class="nav-container">
         <router-link to="/" @click="navReset">Home</router-link>
         <router-link to="/golf" @click="navReset">Golf</router-link>
