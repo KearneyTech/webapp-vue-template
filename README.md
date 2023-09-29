@@ -16,6 +16,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 ## TODOs
+icons - https://icomoon.io/
 Investigate [Vite Templates](https://github.com/vitejs/awesome-vite#templates)
 Top pick: Vue3, TypeScript, Router, Pinia, Playwright, Axios, Sass
 vue-ts-starter - Vue3 + TypeScript + Vite + Pinia.
