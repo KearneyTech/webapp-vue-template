@@ -160,6 +160,14 @@ const staticData = {
       en: "to smile"
     },
     {
+      es: "poner",
+      en: "to put"
+    },
+    {
+      es: "levantar",
+      en: "to get up"
+    },
+    {
       es: "enojado",
       en: "angry"
     },
