@@ -31,7 +31,7 @@ export default defineComponent({
 </template>
 <style lang="scss">
 section.media-player {
-    background-image: url('/car.jpeg');
+    background-image: url('/images/pch.jpeg');
 
     .wrapper {
         background-color: rgb(226 232 240 / 60%);

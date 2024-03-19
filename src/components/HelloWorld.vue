@@ -25,6 +25,7 @@ export default defineComponent({
       <div class="block link" @click="handleBlockClick('screens')">Screens</div>
       <div class="block link" @click="handleBlockClick('media-player')">Media Player</div>
       <div class="block link" @click="handleBlockClick('questions')">Questions</div>
+      <div class="block link" @click="handleBlockClick('clock')">Clock</div>
     </div>
     <div class="panel highlight">For the code of this application, visit <a target="_blank" href="https://github.com/KearneyTech/webapp-vue-template">GitHub.com</a></div>
     <div class="panel highlight">For more about me, visit <a href="https://www.kearneytech.com">KearneyTech.com</a></div>
