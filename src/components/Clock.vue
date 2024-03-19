@@ -22,8 +22,8 @@ export default defineComponent({
 })
 </script>
 <template>
-    <section class="media-player w-screen h-screen bg-center bg-cover">
-        <div class="wrapper border-2 rounded-2xl mt-[30vh] text-center w-96 h-44 mx-auto align-middle">
+    <section class="media-player bg-center bg-cover h-80 p-20">
+        <div class="wrapper border-2 rounded-2xl text-center w-96 h-44 mx-auto align-middle">
             <h3>Media Player</h3>
             <div class="text-9xl">{{ time }}</div>
         </div>
@@ -31,7 +31,7 @@ export default defineComponent({
 </template>
 <style lang="scss">
 section.media-player {
-    background-image: url('/car.jpeg');
+    background-image: url('/images/pch.jpeg');
 
     .wrapper {
         background-color: rgb(226 232 240 / 60%);

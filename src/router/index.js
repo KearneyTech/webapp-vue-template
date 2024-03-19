@@ -5,6 +5,7 @@ import SpanishLesson from './../components/SpanishLesson.vue';
 import Golf from './../components/Golf.vue';
 import MediaPlayer from './../components/MediaPlayer.vue';
 import Questions from './../components/Questions.vue';
+import Clock from './../components/Clock.vue';
 
 const routes = [
     {
@@ -37,6 +38,11 @@ const routes = [
         path: "/questions",
         name: "Questions",
         component: Questions,
+    },
+    {
+        path: "/clock",
+        name: "Clock",
+        component: Clock,
     }
 ]
 
