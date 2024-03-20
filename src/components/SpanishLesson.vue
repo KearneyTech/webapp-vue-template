@@ -3,8 +3,8 @@
         <h3>Spanish Flash Cards</h3>
         <div class="word-container">
           <button @click="handleButtonLastClick">&lt;</button>
-          <div class="word-card">
-            <div class="word" @click="handleWordClick">
+          <div class="word-card" @click="handleWordClick">
+            <div class="word">
               {{ displayWord }}
             </div>
           </div>
@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     font-size: 2.7em;
+    cursor: pointer;
 
     @include min-width(500px) {
         font-size: 3.6em;
@@ -164,6 +165,38 @@ const staticData = {
       en: "to put"
     },
     {
+      es: "poder",
+      en: "able to"
+    },
+    {
+      es: "perder",
+      en: "to lose"
+    },
+    {
+      es: "probar",
+      en: "to try"
+    },
+    {
+      es: "empezar",
+      en: "to start"
+    },
+    {
+      es: "entender",
+      en: "to understand"
+    },
+    {
+      es: "abrir",
+      en: "to open"
+    },
+    {
+      es: "cerrar",
+      en: "to close"
+    },
+    {
+      es: "volver",
+      en: "to return"
+    },
+    {
       es: "levantar",
       en: "to get up"
     },
@@ -258,6 +291,22 @@ const staticData = {
     {
       es: "casi",
       en: "almost"
+    },
+    {
+      es: "primavera",
+      en: "spring"
+    },
+    {
+      es: "verano",
+      en: "summer"
+    },
+    {
+      es: "ontoño",
+      en: "fall"
+    },
+    {
+      es: "invierno",
+      en: "winter"
     },
     {
       es: "rio",
