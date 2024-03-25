@@ -78,8 +78,6 @@ export default defineComponent({
      * no last/previous/back
      * onNext => last = current
      * 
-     * nice to have: history for random advance
-     * 
      */
     handleWordClick() {
       this.logger('clicked');
@@ -117,24 +115,30 @@ export default defineComponent({
       this.wordsDisplayIndex = index;
       this.displayWord = this.words[index].es;
     },
-    randomWord(){
-      const max = this.words.length;
-      this.updateWord((Math.floor(Math.random() * max) + 1) - 1);
-    },
     autoAdvance(){
       setInterval(() =>{this.advanceWord(1)}, 3000)
-      //setInterval(() =>{this.randomWord()}, 3000)
+    },
+    createPlaylist(){
+      let tempWords = staticData.collection;
+      this.words = new Array();
+
+      while(tempWords.length > 0) {
+        let index = this.randomNumber(tempWords.length);
+        this.words.push(tempWords[index]);
+        tempWords.splice(index, 1);
+      }
+    },
+    randomNumber(max: number){
+      return Math.floor(Math.random() * max);
     },
     logger(input: string) {
       this.store.log(input);
     }
   },
   mounted() {
-    this.words = staticData.collection;
+    this.createPlaylist();
     this.advanceWord(0);
-    //this.displayWord = this.words[this.wordsDisplayIndex].es;
     //this.autoAdvance();
-    console.log('mounted');
   }
 });
 
