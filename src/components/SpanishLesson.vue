@@ -2,13 +2,13 @@
     <section class="spanish-lesson">
         <h3>Spanish Flash Cards</h3>
         <div class="word-container">
-          <button @click="handleButtonLastClick">&lt;</button>
+          <button @click="handleButtonLastClick" class="px-2 text-2xl fa-solid fa-circle-chevron-left"></button>
           <div class="word-card" @click="handleWordClick">
             <div class="word">
               {{ displayWord }}
             </div>
           </div>
-          <button @click="handleButtonNextClick">&gt;</button>   
+          <button @click="handleButtonNextClick" class="px-2 text-2xl fa-solid fa-circle-chevron-right"></button>   
         </div>
         <div class="description">Click on a word to see it's translation. Use the buttons to change the cards.</div>
         <!-- Debugger/ -->
@@ -40,18 +40,6 @@
     }
   }
 }
-
-.spanish-lesson {
-  h3 {
-    font-size: 2em;
-  }
-
-  .description {
-    font-size: 2em;
-    line-height: 1.2em;
-    padding: 1.4em;
-  }
-}
 </style>
 
 <script lang="ts">
@@ -66,6 +54,7 @@ export default defineComponent({
       displayWord: "",
       wordsDisplayIndex: 0,
       words: <any>[],
+      randomOrder: false,
       store: useDebugStore()
     }
   },
@@ -119,13 +108,17 @@ export default defineComponent({
       setInterval(() =>{this.advanceWord(1)}, 3000)
     },
     createPlaylist(){
-      let tempWords = staticData.collection;
-      this.words = new Array();
+      if(this.randomOrder) {
+        let tempWords = staticData.collection;
+        this.words = new Array();
 
-      while(tempWords.length > 0) {
-        let index = this.randomNumber(tempWords.length);
-        this.words.push(tempWords[index]);
-        tempWords.splice(index, 1);
+        while(tempWords.length > 0) {
+          let index = this.randomNumber(tempWords.length);
+          this.words.push(tempWords[index]);
+          tempWords.splice(index, 1);
+        }
+      } else {
+        this.words = staticData.collection;
       }
     },
     randomNumber(max: number){
@@ -155,6 +148,42 @@ const staticData = {
     {
       es: "cuchillo",
       en: "knife"
+    },
+    {
+      es: "desayuno",
+      en: "breakfast"
+    },
+    {
+      es: "almuerzo",
+      en: "lunch"
+    },
+    {
+      es: "cena",
+      en: "dinner"
+    },
+    {
+      es: "este",
+      en: "this"
+    },
+    {
+      es: "ese",
+      en: "that"
+    },
+    {
+      es: "antes",
+      en: "before"
+    },
+    {
+      es: "despues",
+      en: "after"
+    },
+    {
+      es: "sobre",
+      en: "on top of"
+    },
+    {
+      es: "debaja",
+      en: "under"
     },
     {
       es: "llorar",

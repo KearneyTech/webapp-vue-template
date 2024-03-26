@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="/var/folders/r_/9l6rnbfx7dgfgc2cb4pjxt_00000gn/T/ink_ext_XXXXXX.svgFLVEL2"
+   inkscape:export-filename="icon.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1341"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.25"
+     inkscape:cx="60.0"
+     inkscape:cy="60.0"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1347" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1336">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect5265"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <linearGradient
+       id="linearGradient849"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop847" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5261">
+      <path
+         style="color:#000000;display:none;fill:#000000;fill-rule:evenodd;stroke-width:0.283637;-inkscape-stroke:none"
+         d="M 15.890733,4.9500265 6.1484542,10.574578 v 11.249656 l 9.7422788,5.62455 9.742832,-5.62455 v -1.322903 -9.926753 z m 0,5.2916095 5.159762,2.978746 v 5.958047 l -5.159762,2.978746 -5.159208,-2.978746 v -5.958047 z"
+         id="path5263" />
+      <path
+         id="lpe_path-effect5265"
+         style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:0.283637;-inkscape-stroke:none"
+         class="powerclip"
+         d="M -4.6321402,-4.5270348 H 36.583585 V 36.68869 H -4.6321402 Z M 15.890733,4.9500265 6.1484542,10.574578 v 11.249656 l 9.7422788,5.62455 9.742832,-5.62455 v -1.322903 -9.926753 z m 0,5.2916095 -5.159208,2.978746 v 5.958047 l 5.159208,2.978746 5.159762,-2.978746 v -5.958047 z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2205"
+       style="display:inline;fill:#ffffff;stroke-width:0.676538"
+       d="M 31.583585,16.080828 A 15.607862,15.607862 0 0 1 15.975722,31.68869 15.607862,15.607862 0 0 1 0.36785984,16.080828 15.607862,15.607862 0 0 1 15.975722,0.47296524 15.607862,15.607862 0 0 1 31.583585,16.080828 Z"
+       clip-path="url(#clipPath5261)"
+       inkscape:path-effect="#path-effect5265"
+       inkscape:original-d="M 31.583585,16.080828 A 15.607862,15.607862 0 0 1 15.975722,31.68869 15.607862,15.607862 0 0 1 0.36785984,16.080828 15.607862,15.607862 0 0 1 15.975722,0.47296524 15.607862,15.607862 0 0 1 31.583585,16.080828 Z" />
+  </g>
+</svg>
