@@ -2,13 +2,13 @@
     <section class="spanish-lesson">
         <h3>Spanish Flash Cards</h3>
         <div class="word-container">
-          <button @click="handleButtonLastClick" class="fa-solid fa-circle-chevron-left"></button>
+          <button @click="handleButtonLastClick" class="px-2 text-2xl fa-solid fa-circle-chevron-left"></button>
           <div class="word-card" @click="handleWordClick">
             <div class="word">
               {{ displayWord }}
             </div>
           </div>
-          <button @click="handleButtonNextClick" class="fa-solid fa-circle-chevron-right"></button>   
+          <button @click="handleButtonNextClick" class="px-2 text-2xl fa-solid fa-circle-chevron-right"></button>   
         </div>
         <div class="description">Click on a word to see it's translation. Use the buttons to change the cards.</div>
         <!-- Debugger/ -->
@@ -148,6 +148,18 @@ const staticData = {
     {
       es: "cuchillo",
       en: "knife"
+    },
+    {
+      es: "desayuno",
+      en: "breakfast"
+    },
+    {
+      es: "almuerzo",
+      en: "lunch"
+    },
+    {
+      es: "cena",
+      en: "dinner"
     },
     {
       es: "este",
