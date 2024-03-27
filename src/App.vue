@@ -7,7 +7,7 @@ import router from './router';
 export default defineComponent({
   data() {
         return {
-          menuState: "hidden",
+          menuState: "closed",
           menuButtonContent: "fa-bars"
         }
       },
@@ -16,11 +16,11 @@ export default defineComponent({
   },
   methods: {
     handleMenuClick(){
-      this.menuState = this.menuState == "" ? "hidden" : "";
+      this.menuState = this.menuState == "" ? "closed" : "";
       this.menuButtonContent = this.menuButtonContent == "fa-xmark" ? "fa-bars" : "fa-xmark";
     },
     navReset(){
-      this.menuState = "hidden";
+      this.menuState = "closed";
       this.menuButtonContent = "fa-bars";
     }
   },
@@ -97,7 +97,7 @@ export default defineComponent({
     }
   }
 
-  &.hidden {
+  &.closed {
     border-style: hidden;
 
     .nav-container {
