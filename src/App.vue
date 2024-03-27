@@ -7,7 +7,7 @@ import router from './router';
 export default defineComponent({
   data() {
         return {
-          menuState: "hidden",
+          menuState: "closed",
           menuButtonContent: "fa-bars"
         }
       },
@@ -16,11 +16,11 @@ export default defineComponent({
   },
   methods: {
     handleMenuClick(){
-      this.menuState = this.menuState == "" ? "hidden" : "";
+      this.menuState = this.menuState == "" ? "closed" : "";
       this.menuButtonContent = this.menuButtonContent == "fa-xmark" ? "fa-bars" : "fa-xmark";
     },
     navReset(){
-      this.menuState = "hidden";
+      this.menuState = "closed";
       this.menuButtonContent = "fa-bars";
     }
   },
@@ -45,6 +45,8 @@ export default defineComponent({
         <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
         <router-link to="/screens" @click="navReset">Screens</router-link>
         <router-link to="/media-player" @click="navReset">Media PLayer</router-link>
+        <router-link to="/questions" @click="navReset">Questions</router-link>
+        <router-link to="/clock" @click="navReset">Clock</router-link>
       </div>
     </div>
     <router-view />
@@ -97,7 +99,7 @@ export default defineComponent({
     }
   }
 
-  &.hidden {
+  &.closed {
     border-style: hidden;
 
     .nav-container {

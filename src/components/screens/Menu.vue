@@ -1,32 +1,36 @@
 <template>
     <section class="menu">
-        <label>Portrait</label>
+        <label for="portrait">Portrait</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="portrait"
+            id="portrait"
         />
-        <label>Landscape</label>
+        <label for="landscape">Landscape</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="landscape"
+            id="landscape"
         />
-        <label>Column</label>
+        <label for="column">Column</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="column"
+            id="column"
         />
-        <label>Step</label>
+        <label for="step">Step</label>
         <input type="radio"
             v-model="dataLayout"
             @change="onSelect"
             name="layout"
             value="step"
+            id="step"
         />
     </section>
 </template>
