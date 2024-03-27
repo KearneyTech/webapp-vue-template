@@ -24,7 +24,7 @@ export default defineComponent({
 <template>
     <section class="media-player bg-center bg-cover h-80 p-20">
         <div class="wrapper border-2 rounded-2xl text-center w-96 h-44 mx-auto align-middle">
-            <h3>Media Player</h3>
+            <h3>Clock</h3>
             <div class="text-9xl">{{ time }}</div>
         </div>
     </section>
