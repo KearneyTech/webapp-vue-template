@@ -1,25 +1,43 @@
 <template>
     <section class="questions">
         <h3>Questions</h3>
-        <div><input type="text"/></div>
+        <div><component :is="liveComponent"/></div>
         <div>
-            <select>
-                <option>First</option>
-                <option>Second</option>
-            </select>
-        </div>
-        <div>
-            <input name="radios" type="radio"><label>Almost Done</label>
-            <input name="radios" type="radio"><label>Done</label>
+            <button @click="doText">Text</button>
+            <button @click="doSelect">Select</button>
+            <button @click="doRadio">Radio</button>
         </div>
     </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Text from './questions/Text.vue';
+import Select from './questions/Select.vue';
+import Radio from './questions/Radio.vue';
 
 export default defineComponent({
-
+    components: {
+        Text,
+        Select,
+        Radio
+    },
+    data() {
+        return {
+            liveComponent: "Text"
+        };
+    },
+    methods: {
+        doText() {
+            this.liveComponent = "Text";
+        },
+        doSelect() {
+            this.liveComponent = "Select";
+        },
+        doRadio() {
+            this.liveComponent = "Radio";
+        }
+    }
 });
 </script>
 
