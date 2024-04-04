@@ -101,6 +101,7 @@ export default defineComponent({
 
   &.closed {
     border-style: hidden;
+    background-color: transparent;
 
     .nav-container {
       display: none;
