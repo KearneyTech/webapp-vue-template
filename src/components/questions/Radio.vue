@@ -1,8 +1,9 @@
 <template>
-    <div>
-        <input name="radios" type="radio"><label>Almost Done</label>
-        <input name="radios" type="radio"><label>Done</label>
-    </div>
+    <fieldset class="text-left flex w-52 flex-col">
+        <legend>Which is best?</legend>
+        <label for="radioOne"><input name="radios" type="radio" id="radioOne">Almost Done</label>
+        <label for="radioTwo"><input name="radios" type="radio" id="radioTwo">Done</label>
+    </fieldset>
 </template>
 
 <script lang="ts">

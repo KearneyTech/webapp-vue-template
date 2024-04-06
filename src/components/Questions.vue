@@ -1,12 +1,12 @@
 <template>
     <section class="questions bg1">
-        <div class="panel bg-slate-50/50 border-2 rounded-2xl mt-[10vh] text-center w-96 h-44 mx-auto align-middle space-y-4">
-            <h3 class="text-xl">Questions</h3>
-            <div><component :is="liveComponent"/></div>
+        <div class="panel text-black bg-slate-50/80 border-2 rounded-2xl mt-[10vh] text-center w-96 mx-auto align-middle space-y-4 p-5">
+            <h3 class="text-4xl">Questions</h3>
+            <div class="p-5"><component :is="liveComponent"/></div>
             <div>
-                <button @click="doText">Text</button>
-                <button @click="doSelect">Select</button>
-                <button @click="doRadio">Radio</button>
+                <button @click="doText" class="text-white">Text</button>
+                <button @click="doSelect" class="text-white">Select</button>
+                <button @click="doRadio" class="text-white">Radio</button>
             </div>
         </div>
     </section>
@@ -63,7 +63,8 @@ section.questions {
     }
 
     @include min-width(1000px) {
-        height: 50vh;
+        width: 90vw;
+        height: 80vh;
     }
     
     &.bg1 {
