@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div><input type="text"/></div>
+        <label for="text" class="flex flex-col text-left text-black">
+            What do you want to say?
+            <input id="text" type="text" class="border-1 border-black bg-transparent w-72"/>
+        </label>
     </div>
 </template>
 
@@ -13,4 +16,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+input {
+    border: 1px solid black;
+}
 </style>

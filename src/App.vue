@@ -55,7 +55,6 @@ export default defineComponent({
 
 <style lang="scss">
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 
