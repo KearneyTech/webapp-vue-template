@@ -54,7 +54,7 @@ export default defineComponent({
       displayWord: "",
       wordsDisplayIndex: 0,
       words: <any>[],
-      randomOrder: false,
+      randomOrder: true,
       store: useDebugStore()
     }
   },
@@ -105,7 +105,7 @@ export default defineComponent({
       this.displayWord = this.words[index].es;
     },
     autoAdvance(){
-      setInterval(() =>{this.advanceWord(1)}, 3000)
+      setInterval(() =>{this.advanceWord(1)}, 4500)
     },
     createPlaylist(){
       if(this.randomOrder) {
@@ -131,7 +131,7 @@ export default defineComponent({
   mounted() {
     this.createPlaylist();
     this.advanceWord(0);
-    //this.autoAdvance();
+    this.autoAdvance();
   }
 });
 
@@ -212,6 +212,14 @@ const staticData = {
     {
       es: "empezar",
       en: "to start"
+    },
+    {
+      es: "esperar",
+      en: "to wait"
+    },
+    {
+      es: "esperanza",
+      en: "hope"
     },
     {
       es: "entender",
