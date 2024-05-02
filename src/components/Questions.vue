@@ -68,25 +68,25 @@ section.questions {
     }
     
     &.bg1 {
-        background-image: url('images/backgrounds/pexels-photo-931018.jpeg');
+        background-image: url('/images/backgrounds/pexels-photo-931018.jpeg');
         background-size: cover;
         background-position: center;
     }
     
     &.bg2 {
-        background-image: url('images/backgrounds/pexels-nout-gons-378570.jpg');
+        background-image: url('/images/backgrounds/pexels-nout-gons-378570.jpg');
         background-size: cover;
         background-position: center;
     }
     
     &.bg3 {
-        background-image: url('images/backgrounds/pexels-luke-miller-18655633.jpg');
+        background-image: url('/images/backgrounds/pexels-luke-miller-18655633.jpg');
         background-size: cover;
         background-position: center;
     }
     
     &.bg4 {
-        background-image: url('images/backgrounds/pexels-eberhard-grossgasteiger-1366919.jpg');
+        background-image: url('/images/backgrounds/pexels-eberhard-grossgasteiger-1366919.jpg');
         background-size: cover;
         background-position: center;
     }
