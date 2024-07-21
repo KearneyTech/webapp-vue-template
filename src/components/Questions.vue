@@ -1,3 +1,13 @@
+/**
+* TODOs
+* - Update buttons div as navigation
+* - Create map of question component names and next component to be viewed.
+* - Add submit buttons to Question components.
+* - Question components emit their component name on form submit.
+* - Question components need to maintain state after set by user.
+* - Create Info component to be default view with description of app.
+* - Create Final component to display configuration. Default state shows configuration not complete. State status?
+*/
 <template>
     <section class="questions bg1">
         <div class="panel text-black bg-slate-50/80 border-2 rounded-2xl mt-[10vh] text-center w-96 mx-auto align-middle space-y-4 p-5">
