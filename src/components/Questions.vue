@@ -12,7 +12,7 @@
     <section class="questions bg1">
         <div class="panel text-black bg-slate-50/80 border-2 rounded-2xl mt-[10vh] text-center w-96 mx-auto align-middle space-y-4 p-5">
             <h3 class="text-4xl">Questions</h3>
-            <div class="p-5"><component :is="liveComponent"/></div>
+            <div class="p-5"><component :is="liveComponent" @submit="handleSubmit"/></div>
             <div>
                 <button @click="doText" class="text-white">Text</button>
                 <button @click="doSelect" class="text-white">Select</button>
@@ -28,18 +28,35 @@ import Text from './questions/Text.vue';
 import Select from './questions/Select.vue';
 import Radio from './questions/Radio.vue';
 
+let map = new Map();
+        map.set('text', 'Select');
+        map.set('select', 'Radio');
+        map.set('radio', 'Text');
+
 export default defineComponent({
     components: {
         Text,
         Select,
         Radio
     },
+    emits: ['handleSubmit'],
     data() {
         return {
-            liveComponent: "Text"
+            liveComponent: "Text",
+            mapViews: map
         };
     },
+    setup(props, ctx) {
+
+    },
     methods: {
+        handleSubmit(arg: any) {
+            console.log('handleSubmit', arg);
+            this.liveComponent = this.mapViews.get(arg);
+        },
+        updateLive(view: string) {
+            this.liveComponent = view;
+        },
         doText() {
             this.liveComponent = "Text";
         },

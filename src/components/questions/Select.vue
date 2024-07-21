@@ -5,6 +5,7 @@
             <option>First</option>
             <option>Second</option>
         </select>
+        <button @click="$emit('submit', 'select')" class="text-white">Submit</button>
     </div>
 </template>
 

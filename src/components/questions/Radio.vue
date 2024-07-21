@@ -4,6 +4,7 @@
         <label for="radioOne"><input name="radios" type="radio" id="radioOne">Almost Done</label>
         <label for="radioTwo"><input name="radios" type="radio" id="radioTwo">Done</label>
     </fieldset>
+    <button @click="$emit('submit', 'radio')" class="text-white">Submit</button>
 </template>
 
 <script lang="ts">
