@@ -4,6 +4,7 @@
             What do you want to say?
             <input id="text" type="text" class="border-1 border-black bg-transparent w-72"/>
         </label>
+        <button @click="$emit('submit', 'text')" class="text-white">Submit</button>
     </div>
 </template>
 
