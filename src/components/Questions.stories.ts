@@ -22,10 +22,25 @@ export const Primary: Story = {
     }),
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
+        await expect(
+            canvas.getByText('Begin')
+        ).toBeInTheDocument();
+        await userEvent.click(canvas.getByText('Begin'));
+        await expect(
+            canvas.getByText('What do you want to say?')
+        ).toBeInTheDocument();
         await userEvent.click(canvas.getByText('Submit'));
         await expect(
-            //canvas.getByText('What do you want to say?')
             canvas.getByText('Choose an option')
         ).toBeInTheDocument();
+        await userEvent.click(canvas.getByText('Submit'));
+        await expect(
+            canvas.getByText('Which is best?')
+        ).toBeInTheDocument();
+        await userEvent.click(canvas.getByText('Submit'));
+        await expect(
+            canvas.getByText('This is the end.')
+        ).toBeInTheDocument();
+        await userEvent.click(canvas.getByText('Start over'));
     }
 }

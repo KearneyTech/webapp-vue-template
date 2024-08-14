@@ -1,12 +1,8 @@
 /**
 * TODOs
 * - Update buttons div as navigation
-* - Create map of question component names and next component to be viewed.
-* - Add submit buttons to Question components.
-* - Question components emit their component name on form submit.
 * - Question components need to maintain state after set by user.
-* - Create Info component to be default view with description of app.
-* - Create Final component to display configuration. Default state shows configuration not complete. State status?
+* - Default state shows configuration not complete. State status?
 */
 <template>
     <section class="questions bg1">
@@ -24,25 +20,31 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Info from './questions/Info.vue';
 import Text from './questions/Text.vue';
 import Select from './questions/Select.vue';
 import Radio from './questions/Radio.vue';
+import Final from './questions/Final.vue';
 
 let map = new Map();
-        map.set('text', 'Select');
-        map.set('select', 'Radio');
-        map.set('radio', 'Text');
+map.set('info', 'Text');
+map.set('text', 'Select');
+map.set('select', 'Radio');
+map.set('radio', 'Final');
+map.set('final', 'Info');
 
 export default defineComponent({
     components: {
+        Info,
         Text,
         Select,
-        Radio
+        Radio,
+        Final
     },
     emits: ['handleSubmit'],
     data() {
         return {
-            liveComponent: "Text",
+            liveComponent: "Info",
             mapViews: map
         };
     },
