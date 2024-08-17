@@ -41,7 +41,6 @@ export default defineComponent({
         Radio,
         Final
     },
-    emits: ['handleSubmit'],
     data() {
         return {
             liveComponent: "Info",

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useQuestionsStore = defineStore('questions', {
     state: ()=>({
-        text: "what",
+        text: "",
         select: "",
         radio: ""
     }),
