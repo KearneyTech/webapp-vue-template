@@ -6,6 +6,7 @@ import Golf from './../components/Golf.vue';
 import MediaPlayer from './../components/MediaPlayer.vue';
 import Questions from './../components/Questions.vue';
 import Clock from './../components/Clock.vue';
+import CubeApp from '../components/CubeApp.vue';
 
 const routes = [
     {
@@ -43,6 +44,11 @@ const routes = [
         path: "/clock",
         name: "Clock",
         component: Clock,
+    },
+    {
+        path: "/cube",
+        name: "Cube",
+        component: CubeApp,
     }
 ]
 
