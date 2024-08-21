@@ -55,7 +55,8 @@ export default defineComponent({
       wordsDisplayIndex: 0,
       words: <any>[],
       randomOrder: true,
-      store: useDebugStore()
+      store: useDebugStore(),
+      advanceInterval: {} as any
     }
   },
   setup() {
@@ -105,7 +106,7 @@ export default defineComponent({
       this.displayWord = this.words[index].es;
     },
     autoAdvance(){
-      setInterval(() =>{this.advanceWord(1)}, 4500)
+      this.advanceInterval = setInterval(() =>{this.advanceWord(1)}, 4500)
     },
     createPlaylist(){
       if(this.randomOrder) {
@@ -132,7 +133,10 @@ export default defineComponent({
     this.createPlaylist();
     this.advanceWord(0);
     this.autoAdvance();
-  }
+  },
+  unmounted() {
+    clearInterval(this.advanceInterval);
+  },
 });
 
 const staticData = {
