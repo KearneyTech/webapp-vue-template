@@ -20,6 +20,7 @@ export default defineComponent({
     </div>
     <div class="header">Components</div>
     <div class="block-container">
+      <div class="block link" @click="handleBlockClick('cube')">Cube</div>
       <div class="block link" @click="handleBlockClick('spanish-lesson')">Flash Cards</div>
       <div class="block link" @click="handleBlockClick('golf')">Golf</div>
       <div class="block link" @click="handleBlockClick('screens')">Screens</div>
