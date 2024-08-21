@@ -1,50 +1,89 @@
 /**
 * TODOs
+* - Fix alignment of all page elements
 * - Create Board component
-* - Define props for tiles
+* - Create Cube component
 * - Add photo background
 * - Create CSS animations
 * - Scene? location
-* - Create Board component
 */
 <template>
-    <div id="board">
-        <div id="cube">
-            <div id="topLeft" @click="handleTopLeftClick" class="tile"></div>
-            <div id="topRight" @click="handleTopRight" class="tile"></div>
-            <div id="bottomLeft" @click="handleBottomLeft" class="tile"></div>
-            <div id="bottomRight" @click="handleBottomRight" class="tile"></div>
+    <div id="board" class="flex flex-col justify-center w-64">
+        <div id="cube" class="flex flex-wrap justify-center">
+            <Tile :configuration="tile1" @handleClick="handleTopLeftClick"/>
+            <Tile :configuration="tile2" @handleClick="handleTopRight"/>
+            <Tile :configuration="tile3" @handleClick="handleBottomLeft"/>
+            <Tile :configuration="tile4" @handleClick="handleBottomRight"/>
         </div>
+        <p>Click tiles to change color. Match color of all tiles to solve the Cube.</p>
     </div>
-    <p>
-
-    </p>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import Tile from "./cube/Tile.vue";
 
-class Tile {
+type TileObject = {
     id: string;
     color: string;
     style: string;
     content: string;
     clicked: boolean;
-
-    constructor() {
-        this.id = '';
-        this.color = '';
-        this.style = '';
-        this.content = '';
-        this.clicked = false;
-    }
 };
 
 export default defineComponent({
     name: 'CubeApp',
+    components: {Tile},
     data(){
         return {
-            tiles: []
+            colors: ['red', 'blue', 'green', 'white'],
+            tile1: {} as TileObject,
+            tile2: {} as TileObject,
+            tile3: {} as TileObject,
+            tile4: {} as TileObject,
         }
+    },
+    mounted() {
+        this.tile1 = {
+            id: 'tile1',
+            color: '',
+            style: 'tile',
+            content: '',
+            clicked: false
+        } as TileObject;
+
+        this.tile2 = {
+            id: 'tile2',
+            color: '',
+            style: 'tile',
+            content: '',
+            clicked: false
+        } as TileObject;
+
+        this.tile3 = {
+            id: 'tile3',
+            color: '',
+            style: 'tile',
+            content: '',
+            clicked: false
+        } as TileObject;
+
+        this.tile4 = {
+            id: 'tile4',
+            color: '',
+            style: 'tile',
+            content: '',
+            clicked: false
+        } as TileObject;
+
+        this.tile1.color = this.colors[this.randomNumber(4)];
+        this.tile2.color = this.colors[this.randomNumber(4)];
+
+        let randomIndex = this.randomNumber(4)
+        this.tile3.color = this.colors[randomIndex];
+
+        // Force next color to be different
+        randomIndex = (randomIndex === (this.colors.length - 1)) ? 0 : randomIndex + 1;
+        this.tile4.color = this.colors[randomIndex];
     },
     methods: {
         initCube(){
@@ -59,24 +98,53 @@ export default defineComponent({
             // Initialize next cube
             // Remove solved cube
         },
-        handleTopLeftClick(){},
-        handleTopRight(){},
-        handleBottomLeft(){},
-        handleBottomRight(){}
+        handleTopLeftClick() {
+            const newColor = this.nextColor(this.tile1.color);
+            this.tile1.color = newColor;
+        },
+        nextColor(color: string){
+            let colorIndex = this.colors.indexOf(color);
+            colorIndex = (colorIndex === (this.colors.length - 1)) ? 0 : colorIndex + 1;
+            return this.colors[colorIndex];
+        },
+        handleTopRight(){
+            const newColor = this.nextColor(this.tile2.color);
+            this.tile2.color = newColor;
+        },
+        handleBottomLeft(){
+            const newColor = this.nextColor(this.tile3.color);
+            this.tile3.color = newColor;
+        },
+        handleBottomRight(){
+            const newColor = this.nextColor(this.tile4.color);
+            this.tile4.color = newColor;
+        },
+        randomNumber(max: number){
+            return Math.floor(Math.random() * max);
+        },
     }
 });
 </script>
 <style lang="scss">
-#cube {
+section.app-vue {
     display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 200px;
-
-    .tile {
-        border: 1px solid white;
-        height: 75px;
-        width: 75px;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    padding-top: 4em;
+}
+#cube {
+    .red {
+        background-color: red;
+    }
+    .blue {
+        background-color: blue;
+    }
+    .green {
+        background-color: green;
+    }
+    .white {
+        background-color: white;
     }
 }
 </style>

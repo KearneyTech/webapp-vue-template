@@ -41,6 +41,7 @@ export default defineComponent({
       <button class="menu-link" @click="handleMenuClick"><i :class="['fa-solid', menuButtonContent]"></i></button>
       <div class="nav-container">
         <router-link to="/" @click="navReset">Home</router-link>
+        <router-link to="/cube" @click="navReset">Cube</router-link>
         <router-link to="/golf" @click="navReset">Golf</router-link>
         <router-link to="/spanish-lesson" @click="navReset">Spanish Lesson</router-link>
         <router-link to="/screens" @click="navReset">Screens</router-link>
