@@ -585,6 +585,10 @@ video {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-44 {
   height: 11rem;
 }

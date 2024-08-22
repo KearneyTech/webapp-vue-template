@@ -4,6 +4,7 @@
 * - Create Board component
 * - Create Cube component
 * - Add media background
+* - Add page background, see Questions
 */
 <template>
     <div id="board" class="flex flex-col justify-center w-64">
@@ -141,7 +142,6 @@ export default defineComponent({
 <style lang="scss">
 section.app-vue {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 320px;
     padding-top: 4em;
