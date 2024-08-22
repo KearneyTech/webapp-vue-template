@@ -20,13 +20,13 @@ export default defineComponent({
     </div>
     <div class="header">Components</div>
     <div class="block-container">
-      <div class="block link" @click="handleBlockClick('cube')">Cube</div>
-      <div class="block link" @click="handleBlockClick('spanish-lesson')">Flash Cards</div>
-      <div class="block link" @click="handleBlockClick('golf')">Golf</div>
-      <div class="block link" @click="handleBlockClick('screens')">Screens</div>
-      <div class="block link" @click="handleBlockClick('media-player')">Media Player</div>
-      <div class="block link" @click="handleBlockClick('questions')">Questions</div>
-      <div class="block link" @click="handleBlockClick('clock')">Clock</div>
+      <div class="block link aspect-square" @click="handleBlockClick('cube')">Cube</div>
+      <div class="block link aspect-square" @click="handleBlockClick('spanish-lesson')">Flash Cards</div>
+      <div class="block link aspect-square" @click="handleBlockClick('clock')">Clock</div>
+      <div class="block link aspect-square" @click="handleBlockClick('questions')">Questions</div>
+      <div class="block link aspect-square" @click="handleBlockClick('screens')">Screens</div>
+      <div class="block link aspect-square" @click="handleBlockClick('media-player')">Media Player</div>
+      <div class="block link aspect-square" @click="handleBlockClick('golf')">Golf</div>
     </div>
     <div class="panel highlight">For the code of this application, visit <a target="_blank" href="https://github.com/KearneyTech/webapp-vue-template">GitHub.com</a></div>
     <div class="panel highlight">For more about me, visit <a href="https://www.kearneytech.com">KearneyTech.com</a></div>
