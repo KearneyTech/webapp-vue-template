@@ -7,9 +7,9 @@
 * - Add page background, see Questions
 */
 <template>
-    <div id="board" class="flex flex-col justify-center w-64">
+    <div id="board" class="flex flex-col justify-between w-96">
         <p class="mb-8">the CUBE</p>
-        <div id="cube" :class="['flex', 'flex-wrap', 'justify-center', cubeStyle]">
+        <div id="cube" :class="['flex', 'flex-wrap', 'justify-center', 'w-64', 'place-self-center', cubeStyle]">
             <Tile :color="tile1.color" :id="tile1.id" @handleClick="handleTopLeftClick"/>
             <Tile :color="tile2.color" :id="tile2.id" @handleClick="handleTopRight"/>
             <Tile :color="tile3.color" :id="tile3.id" @handleClick="handleBottomLeft"/>
@@ -140,12 +140,6 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-section.app-vue {
-    display: flex;
-    justify-content: center;
-    width: 320px;
-    padding-top: 4em;
-}
 #cube {
     .red {
         background-color: red;
