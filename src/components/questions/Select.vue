@@ -1,7 +1,7 @@
 <template>
     <div class="text-left">
         <label>Choose an option</label>
-        <select class="w-72 border border-black bg-transparent">
+        <select v-model="selectValue" class="w-72 border border-black bg-transparent">
             <option>First</option>
             <option>Second</option>
         </select>
@@ -11,9 +11,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapWritableState } from 'pinia';
+import { useQuestionsStore } from '../../stores/general';
 
 export default defineComponent({
-
+    computed: {
+        ...mapWritableState(useQuestionsStore, {selectValue: 'select'})
+    }
 });
 </script>
 
