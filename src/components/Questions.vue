@@ -20,6 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useQuestionsStore } from '../stores/general';
 import Info from './questions/Info.vue';
 import Text from './questions/Text.vue';
 import Select from './questions/Select.vue';
@@ -52,6 +53,10 @@ export default defineComponent({
     },
     methods: {
         handleSubmit(arg: any) {
+            if(arg === "final") {
+                const store = useQuestionsStore();
+                store.$reset();
+            }
             console.log('handleSubmit', arg);
             this.liveComponent = this.mapViews.get(arg);
         },

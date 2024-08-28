@@ -14,7 +14,7 @@ export default defineComponent({
 
 <template>
   <section class="template-glass">
-    <div class="title">Gallery of Components</div>
+    <div class="title font-bold panel text-black bg-white">Gallery of Components</div>
     <div class="text">
       This is a collection of small components I put together. I use this code base for rapid prototyping with VueJS. Click on a component to take a look. Use the menu icon to move around the gallery. Hope you enjoy it.
     </div>
@@ -28,8 +28,8 @@ export default defineComponent({
       <div class="block link aspect-square" @click="handleBlockClick('media-player')">Media Player</div>
       <div class="block link aspect-square" @click="handleBlockClick('golf')">Golf</div>
     </div>
-    <div class="panel highlight">For the code of this application, visit <a target="_blank" href="https://github.com/KearneyTech/webapp-vue-template">GitHub.com</a></div>
-    <div class="panel highlight">For more about me, visit <a href="https://www.kearneytech.com">KearneyTech.com</a></div>
+    <div class="panel text-black bg-white">For the code of this application, visit <a target="_blank" href="https://github.com/KearneyTech/webapp-vue-template">GitHub.com</a></div>
+    <div class="panel text-black bg-white">For more about me, visit <a href="https://www.kearneytech.com">KearneyTech.com</a></div>
 </section>
 </template>
 
@@ -44,23 +44,15 @@ body {
   width: 60%;
   max-width: 600px;
 }
-.logo{
-  width: 3em;
-  height: 3em;
-  border: 1px solid #fff;
-  margin: 0 auto;
-  margin-bottom: .5rem;
-}
 .title {
   display: inline-block;
   font-size: 1.5rem;
-  font-weight: 700;
   margin-bottom: $bottom-spacing;
 }
 .header {
   font-size: 1.2rem;
   margin: 1.8rem auto .75rem;
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 .block-container {
   display: inline-flex;
@@ -98,16 +90,11 @@ body {
   margin: 1rem auto;
   line-height: 1.3rem;
   padding: .4rem;
-
 }
 .text{
   display: inline-block;
   text-align: center;
   margin: 0 auto;
   margin-bottom: $bottom-spacing;
-}
-.highlight{
-  color: #000;
-  background-color: #fff;
 }
 </style>
