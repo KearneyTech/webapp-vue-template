@@ -13,21 +13,14 @@ import { defineComponent } from 'vue';
 import { mapWritableState } from 'pinia';
 import { useQuestionsStore } from '../../stores/general';
 
-let store;
-
 export default defineComponent({
     name: "Text",
     data() {
         return {
         }
     },
-    setup(props, ctx) {
-        //store = useQuestionsStore();
-    },
     methods: {
         handleSubmit(object: any) {
-            console.log(object);
-            console.log(this.textValue);
             this.$emit('submit', 'text')
         }
     },

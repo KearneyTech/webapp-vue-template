@@ -4,7 +4,7 @@
         <p>Text: {{ text }}</p>
         <p>Select: {{ select }}</p>
         <p>Radio: {{ radio }}</p>
-        <button @click="$emit('submit', 'final')" class="text-white">Start over</button>
+        <button @click="$emit('submit', 'final')" class="text-white">Reset</button>
     </div>
 </template>
 <script lang="ts">
