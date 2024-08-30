@@ -29,6 +29,7 @@ export const Primary: Story = {
         await expect(
             canvas.getByText('What do you want to say?')
         ).toBeInTheDocument();
+        await expect(canvas.getByTestId('text')).toBeInTheDocument();
         await userEvent.click(canvas.getByText('Submit'));
         await expect(
             canvas.getByText('Choose an option')
@@ -41,6 +42,6 @@ export const Primary: Story = {
         await expect(
             canvas.getByText('This is the end.')
         ).toBeInTheDocument();
-        await userEvent.click(canvas.getByText('Start over'));
+        await userEvent.click(canvas.getByText('Reset'));
     }
 }
