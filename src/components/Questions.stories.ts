@@ -29,19 +29,30 @@ export const Primary: Story = {
         await expect(
             canvas.getByText('What do you want to say?')
         ).toBeInTheDocument();
-        await expect(canvas.getByTestId('text')).toBeInTheDocument();
+        await userEvent.type(canvas.getByTestId('text'), 'Storybook');
         await userEvent.click(canvas.getByText('Submit'));
         await expect(
             canvas.getByText('Choose an option')
         ).toBeInTheDocument();
+        await userEvent.selectOptions(canvas.getByTestId('select'), 'First')
         await userEvent.click(canvas.getByText('Submit'));
         await expect(
             canvas.getByText('Which is best?')
         ).toBeInTheDocument();
+        await userEvent.click(canvas.getByTestId('radioOne'));
         await userEvent.click(canvas.getByText('Submit'));
+        
+        // Final page assertions
         await expect(
-            canvas.getByText('This is the end.')
+            canvas.getByText('Text: Storybook')
         ).toBeInTheDocument();
+        await expect(
+            canvas.getByText('Select: First')
+        ).toBeInTheDocument();
+        await expect(
+            canvas.getByText('Radio: radioOne')
+        ).toBeInTheDocument();
+
         await userEvent.click(canvas.getByText('Reset'));
     }
 }

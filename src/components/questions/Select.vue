@@ -1,7 +1,7 @@
 <template>
     <div class="text-left">
         <label>Choose an option</label>
-        <select v-model="selectValue" class="w-72 border border-black bg-transparent">
+        <select v-model="selectValue" class="w-72 border border-black bg-transparent" data-testid="select">
             <option>First</option>
             <option>Second</option>
         </select>
