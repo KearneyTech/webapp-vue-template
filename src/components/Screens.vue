@@ -60,11 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-    background-position: top 10% left 10%;
-    background-size: 150%;
-}
-
 .screens {
 
     h3 {color: $normal-standout}

@@ -36,9 +36,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 $thickness: 3px;
 $bottom-spacing: 1.2em;
-body {
-    font-family: 'Open Sans', sans-serif;
-}
 .template-glass {
   margin: 2rem auto;
   width: 60%;
