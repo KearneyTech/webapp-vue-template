@@ -67,10 +67,6 @@ export default defineComponent({
   margin: 0 auto;
   text-align: center;
 
-  @include min-width(470px) {
-    padding: 2rem;
-  }
-
   button:hover {
     border-color: $normal-accent;
   }
