@@ -43,13 +43,8 @@ export const useFootballStore = defineStore('football', {
                 {
                     name: 'Eagles',
                     bye: '5',
+                    rank: '19',
                     schedule: [
-                        {
-                            week: '4',
-                            opp: 'TB',
-                            oppRank: '9',
-                            rankColor: 'red'
-                        },
                         {
                             week: '5',
                             opp: '',
@@ -74,11 +69,18 @@ export const useFootballStore = defineStore('football', {
                             oppRank: '29',
                             rankColor: 'green'
                         },
+                        {
+                            week: '14',
+                            opp: 'CAR',
+                            oppRank: '31',
+                            rankColor: 'green'
+                        },
                     ]
                 },
                 {
                     team: 'Packers',
                     bye: '10',
+                    rank: '17',
                     schedule: [
                         {
                             week: '3',
@@ -87,23 +89,103 @@ export const useFootballStore = defineStore('football', {
                             rankColor: 'green'
                         },
                         {
-                            week: '4',
-                            opp: 'MIN',
-                            oppRank: '18',
-                            rankColor: ''
+                            week: '10',
+                            opp: '',
+                            oppRank: '',
+                            rankColor: 'bye'
+                        },
+                        {
+                            week: '11',
+                            opp: '@CHI',
+                            oppRank: '24',
+                            rankColor: 'Green'
+                        },
+                        {
+                            week: '12',
+                            opp: 'SF',
+                            oppRank: '23',
+                            rankColor: 'Green'
+                        },
+                        {
+                            week: '13',
+                            opp: 'MIA',
+                            oppRank: '27',
+                            rankColor: 'Green'
+                        }
+                    ]
+                },
+                {
+                    team: 'Saints',
+                    bye: '12',
+                    rank: '20',
+                    schedule: [
+                        {
+                            week: '7',
+                            opp: 'DEN',
+                            oppRank: '28',
+                            rankColor: 'Green'
+                        },
+                        {
+                            week: '9',
+                            opp: '@CAR',
+                            oppRank: '29',
+                            rankColor: 'Green'
+                        },
+                        {
+                            week: '11',
+                            opp: 'CLE',
+                            oppRank: '29',
+                            rankColor: 'Green'
+                        },
+                        {
+                            week: '12',
+                            opp: '',
+                            oppRank: '',
+                            rankColor: 'Bye'
+                        },
+                        {
+                            week: '14',
+                            opp: '@NYG',
+                            oppRank: '30',
+                            rankColor: 'Green'
+                        }
+                    ]
+                },
+                {
+                    team: 'Seahawks',
+                    bye: '10',
+                    rank: '8',
+                    schedule: [
+                        {
+                            week: '3',
+                            opp: 'MIA',
+                            oppRank: '26',
+                            rankColor: 'Green'
                         },
                         {
                             week: '5',
-                            opp: 'LAR',
-                            oppRank: '21',
-                            rankColor: ''
+                            opp: 'NYG',
+                            oppRank: '30',
+                            rankColor: 'Green'
                         },
                         {
                             week: '6',
-                            opp: 'ARI',
-                            oppRank: '11',
-                            rankColor: ''
+                            opp: 'SF',
+                            oppRank: '23',
+                            rankColor: 'Green'
                         },
+                        {
+                            week: '10',
+                            opp: '',
+                            oppRank: '',
+                            rankColor: 'Bye'
+                        },
+                        {
+                            week: '11',
+                            opp: 'SF',
+                            oppRank: '23',
+                            rankColor: 'Green'
+                        }
                     ]
                 }
             ]
