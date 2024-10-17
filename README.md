@@ -1,40 +1,17 @@
-# Vue Webapp Template
+## Portfolio Project: VueJS Web Application
+
+This project is a fully responsive and interactive web application built from the ground up using JavaScript, HTML5, and CSS3. Designed with a user-centric approach, it showcases a modern, sleek interface with intuitive navigation and smooth animations.
+
+### Key Features:
+- **Dynamic User Interface:** The app leverages JavaScript to create dynamic and interactive user experiences.
+- **JavaScript Components:** Built custom components to understand Vue's ability organize the project's functionality.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop views with responsive layouts and mobile-first design techniques using CSS media queries and Flexbox.
+- **JavaScript ES6+ and TypeScript:** Utilized modern JavaScript features such as arrow functions, template literals to write clean, concise, and maintainable code. Additionally, implemented TypeScript for type safety and better tooling support, reducing runtime errors and improving code quality through static type checking.
+- **UI Automated Testing:** Implemented automated testing for the user interface using the Storybook framework, ensuring the reliability and functionality of key features across different browsers and devices. This approach helped to catch bugs early, improve code quality, and reduce manual testing efforts while ensuring a consistent user experience.
+- **Version Control:** Hosted the project on GitHub, managing code with Git for version control, ensuring seamless collaboration and project tracking.
+
+This project demonstrates my expertise in front-end development, from crafting a polished UI to writing efficient, maintainable JavaScript code. It's a reflection of my ability to solve complex problems, implement cutting-edge technologies, and create applications that deliver excellent user experiences. I also wanted to show my commitment to maintaining high-quality code and delivering robust applications through automated testing.
+
+This project was bootstrapped with [Vite](https://vite.dev/).
+
 [Hosted site](https://webapp-vue.kearneytech.com/)
-
-## Vue 3 + TypeScript + Vite
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
-
-## TODOs
-icons - https://icomoon.io/
-Investigate [Vite Templates](https://github.com/vitejs/awesome-vite#templates)
-Top pick: Vue3, TypeScript, Router, Pinia, Playwright, Axios, Sass
-vue-ts-starter - Vue3 + TypeScript + Vite + Pinia.
-vite-vue3-typescript-webcomponent - Vue 3 / Typescript / boiler plate to develop Web Component.
-vulcan - The template for mobile application. Vite, Vue 3, TypeScript, Sass, i18n, Vitest&Cypress, Pinia, APIs&Mock, ESLint, Prettier, auto-importing.
-Vue Naive - Admin template, base on Vue 3 + Pinia + Naive UI.
-vite-vue3-bootstrap-ts-vitest-starter - Vue 3 + TypeScript + Vite + Bootstrap Vue 3 + Vitest.
-
-Investigate Tailwind
-
-End to End tests
-
-## Data Objects
-Item
-name, image, description, categories
-
-Category
-name, description
